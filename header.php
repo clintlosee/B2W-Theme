@@ -54,7 +54,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a href="/" class="navbar-brand"><img src="assets/img/logo.png" alt="Bootstrap to WordPress"/></a>
+						<a href="/" class="navbar-brand"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to WordPress"/></a>
 					</div> <!-- end navbar-header -->
 
 
@@ -77,4 +77,4 @@
 
 	</header>
 
-	<div id="content" class="site-content">
+	

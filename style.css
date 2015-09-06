@@ -267,57 +267,6 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
 
 code,
 kbd,
@@ -326,18 +275,6 @@ var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
-}
-
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
 }
 
 big {
@@ -351,249 +288,29 @@ html {
 	box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
-}
-
-body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-}
-
-blockquote,
-q {
-	quotes: "" "";
-}
-
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
-
-ul,
-ol {
-	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	list-style: decimal;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd {
-	margin: 0 1.5em 1.5em;
-}
-
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
 
-table {
-	margin: 0 0 1.5em;
-	width: 100%;
-}
 
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-}
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-	color: #111;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-	padding: 3px;
-}
-
-textarea {
-	padding-left: 3px;
-	width: 100%;
-}
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-	color: royalblue;
-}
 
-a:visited {
-	color: purple;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
-}
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
-
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
-
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
-}
 
 /* Small menu. */
 .menu-toggle,
@@ -908,7 +625,11 @@ body {
 	margin-top: 50px;
 	font-family: 'Raleway', Helvetica, sans-serif;
 	font-size: 16px;
-	background: url('../img/tile.jpg') top left repeat;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/tile.jpg') top left repeat;
+}
+/* Fix top margin when logged in */
+.logged-in .navbar-fixed-top {
+	top: 32px;
 }
 
 /* == GLOBAL STYLES == */
@@ -955,7 +676,7 @@ img {
 	max-width: 100%;
 }
 .modal-content {
-	background: url('../img/tile.jpg') top left repeat;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/tile.jpg') top left repeat;
 }
 button.btn:focus {
 	outline: none !important;
@@ -1011,7 +732,7 @@ blockquote:before {
 
 /* == HERO == */
 #hero {
-	background: url('../img/hero-bg.jpg') 50% 50px repeat fixed;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/hero-bg.jpg') 50% 50px repeat fixed;
 	min-height: 500px;
 	padding: 40px 0;
 	color: white;
@@ -1099,11 +820,11 @@ section h3 {
 	width: 100%;
 }
 .feature-image-default {
-	background: url('../img/stuff-feature.jpg') no-repeat;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/stuff-feature.jpg') no-repeat;
 	background-size: cover;
 }
 .feature-image-default-alt {
-	background: url('../img/hipster-stuff.jpg') no-repeat;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/hipster-stuff.jpg') no-repeat;
 	background-size: cover;
 }
 .feature-image h1 {
@@ -1139,13 +860,13 @@ section h3 {
 	text-align: center;
 }
 #video-feature {
-	background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/stuff-bg.jpg') 50% 100% repeat fixed;
 	background-size: cover;
 	text-align: center;
 	color: white;
 }
 #instructor {
-	background: white url('../img/brad-elvis.png') 90% -10px no-repeat;
+	background: white url('/wp-content/themes/B2W-Theme/assets/img/brad-elvis.png') 90% -10px no-repeat;
 }
 #instructor h2 {
 	margin: 0 0 20px;
@@ -1187,7 +908,7 @@ section h3 {
 	border-radius: 50%;
 }
 #signup {
-	background: url('../img/hipster-stuff.jpg') center center repeat fixed;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/hipster-stuff.jpg') center center repeat fixed;
 	text-align: center;
 	background-size: cover;
 	color: white;
@@ -1373,7 +1094,7 @@ footer li.signup-link a:hover {
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	background: url('../img/icon-sprite.png') no-repeat;
+	background: url('/wp-content/themes/B2W-Theme/assets/img/icon-sprite.png') no-repeat;
 }
 .ci.ci-computer			{ background-position: 0 0; }
 .ci.ci-watch			{ background-position: -40px 0; }
@@ -1439,6 +1160,12 @@ button[type="submit"]:hover {
 		background: rgba(255, 255, 255, 0.8);
 	}
 }
+/* Fix top margin when logged in */
+@media screen and ( max-width: 782px ) {
+	.logged-in .navbar-fixed-top {
+		top: 46px;
+	}
+}
 @media screen and ( max-width: 768px ) {
 	.logo {
 		width: 50%;
@@ -1456,6 +1183,12 @@ button[type="submit"]:hover {
 		width: 48%;
 		margin-right: 2%;
 		min-height: 750px;
+	}
+}
+/* Fix top margin when logged in */
+@media screen and ( max-width: 782px ) {
+	.logged-in .navbar-fixed-top {
+		top: 42px;
 	}
 }
 @media screen and ( max-width: 568px ) {
