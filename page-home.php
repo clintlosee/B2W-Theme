@@ -12,6 +12,19 @@ $button_text			= get_post_meta( 7, 'button_text', true );
 $optin_button_text		= get_post_meta( 7, 'optin_button_text', true );
 $optin_text				= get_post_meta( 7, 'optin_text', true );
 
+// Advanced Custom Fields
+$income_featured_image		= get_field('income_featured_image');
+$income_section_title		= get_field('income_section_title');
+$income_section_desc		= get_field('income_section_description');
+$reason_1_title				= get_field('reason_1_title');
+$reason_1_desc				= get_field('reason_1_description');
+$reason_2_title				= get_field('reason_2_title');
+$reason_2_desc				= get_field('reason_2_description');
+
+$who_featured_image			= get_field('who_featured_image');
+$who_section_title			= get_field('who_section_title');
+$who_section_body			= get_field('who_section_body');
+
 get_header(); ?>
 
 	<!-- HERO
@@ -73,20 +86,24 @@ get_header(); ?>
 	<section id="boost-income">
 		<div class="container">
 			<div class="section-header">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-boost.png" alt="Chart">
-				<h2>How You Can Boost Your Income</h2>
+
+				<?php if( !empty($income_featured_image) ) : ?>
+					<img src="<?php echo $income_featured_image['url']; ?>" alt="<?php echo $income_featured_image['alt']; ?>">
+				<?php endif; ?>
+
+				<h2><?php echo $income_section_title ?></h2>
 			</div> <!-- end section-header -->
 
-			<p class="lead">Whether you're a freelance designer, entrepreneur, employee for a company, code hobbyist, or looking for a new career — this course gives you an immensely valuable skill that will enable you to either:</p>
+			<p class="lead"><?php echo $income_section_desc ?></p>
 
 			<div class="row">
 				<div class="col-sm-6">
-					<h3>Make money on the side</h3>
-					<p>So you can save up for that Hawaiian vacation you've been wanting, help pay off your debt, your car, your mortgage, or simply just to have bonus cash laying around.</p>
+					<h3><?php echo $reason_1_title ?></h3>
+					<p><?php echo $reason_1_desc ?></p>
 				</div> <!-- end col -->
 				<div class="col-sm-6">
-					<h3>Create a full-time income</h3>
-					<p>WordPress developers have options. Many developers make a generous living off of creating custom WordPress themes and selling them on websites like ThemeForest. Freelance designers and developers can also take on WordPress projects and make an extra $1,000 - $5,000+ per month.</p>
+					<h3><?php echo $reason_2_title ?></h3>
+					<p><?php echo $reason_1_desc ?></p>
 				</div> <!-- end col -->
 			</div> <!-- end row -->
 		</div> <!-- end container -->
@@ -97,30 +114,17 @@ get_header(); ?>
 	<section id="who-benefits">
 		<div class="container">
 			<div class="section-header">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-pad.png" alt="Pad and pencil">
-				<h2>Who Should Take This Course?</h2>
+
+				<?php if( !empty($who_featured_image) ) : ?>
+					<img src="<?php echo $who_featured_image['url']; ?>" alt="<?php echo $who_featured_image['alt']; ?>">
+				<?php endif; ?>
+
+				<h2><?php echo $who_section_title; ?></h2>
 			</div> <!-- end section-header -->
 
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
-					<h3>Graphics &amp; Web Designers</h3>
-					<p>Graphic designers are extremely talented, but ask them to code their designs and they'll freeze up! This leaves them with no other choice but to hire a web developer. Any professional graphic designers knows web developers can be expensive.</p>
-					<p>If you're a designer, learning to code your own WordPress websites can change your business entirely! Now, not only are you a great designer, but you're a skillful developer, too! This puts you in a position to make an extra $1,000 – $5,000 per project.</p>
-
-					<h3>Entrepreneurs</h3>
-					<p>Entrepreneurs have big dreams, and in many cases, shoestring budgets. In order to survive in the cut-throat world of the Startup company, it's a necessity to have a world-class website. However, world-class websites come with a large price tag.</p>
-					<p>If you can learn how to build a high-quality startup website by yourself, then you’ve just saved yourself a lot of cash, <strong>tens of thousands of dollars in many cases.</strong></p>
-
-					<h3>Employees</h3>
-					<p>Any company knows the education &amp; training of their employees is key to a thriving team.
-					Depending on the type of company you work for, if you understand how to code, and can develop CMS driven websites, that gives you <strong>negotiating power for a better position, or a higher salary.</strong></p>
-
-					<h3>Code Hobbyists</h3>
-					<p>It's fun to learn challenging new skills. Code hobbyists can add dynamic websites to their arsenal of tools to play with — you can even sell WordPress themes and plugins for cash! The possibilities are truly endless.<p>
-
-					<h3>People Looking for a New Career</h3>
-					<p>Are you out of work? Looking for a more rewarding job? Desire a career that can allow you to work almost anywhere in the world? Becoming a Web Developer might be the answer for you.</p>
-					<p><strong>Web developers are paid well, anywhere from $33,000 to more than $105,000 per year.</strong> They get to work at amazing companies that are changing the world, or they enjoy the ability to start their own companies, become location-independent and work from home, from coffee shops, in an airplane, on the beach, or wherever they want!</p>
+					<?php echo $who_section_body ?>
 				</div> <!-- end col -->
 			</div> <!-- end row -->
 		</div> <!-- end container -->
