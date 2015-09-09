@@ -35,6 +35,17 @@ $project_feature_body		= get_field('project_feature_body');
 $video_feature_title		= get_field('video_feature_title');
 $video_feature_code			= get_field('video_feature_code');
 
+$instructor_section_title	= get_field('instructor_section_title');
+$instructor_name			= get_field('instructor_name');
+$bio_excerpt				= get_field('bio_excerpt');
+$full_bio					= get_field('full_bio');
+$twitter_username			= get_field('twitter_username');
+$facebook_username			= get_field('facebook_username');
+$googleplus_username		= get_field('googleplus_username');
+$number_circle_one			= get_field('number_circle_one');
+$number_circle_two			= get_field('number_circle_two');
+$number_circle_three 		= get_field('number_circle_three');
+
 get_header(); ?>
 
 	<!-- HERO
@@ -54,20 +65,20 @@ get_header(); ?>
 						<div id="price-timeline">
 							<div class="price active">
 								<h4>Pre-Launch Price <small>Ends soon!</small></h4>
-								<span><?php echo $prelaunch_price ?></span>
+								<span><?php echo $prelaunch_price; ?></span>
 							</div> <!-- end price -->
 
 							<div class="price">
 								<h4>Launch Price <small>Coming soon!</small></h4>
-								<span><?php echo $launch_price ?></span>
+								<span><?php echo $launch_price; ?></span>
 							</div> <!-- end price -->
 
 							<div class="price">
 								<h4>Final Price <small>Coming soon!</small></h4>
-								<span><?php echo $final_price ?></span>
+								<span><?php echo $final_price; ?></span>
 							</div> <!-- end price -->
 
-							<p><a class="btn btn-lg btn-danger" href="<?php echo $course_url ?>" role="button"><?php echo $button_text ?></a></p>
+							<p><a class="btn btn-lg btn-danger" href="<?php echo $course_url ?>" role="button"><?php echo $button_text; ?></a></p>
 						</div>
 					</div> <!-- end col -->
 				</div> <!-- end row -->
@@ -81,11 +92,11 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8">
-					<p class="lead"><?php echo $optin_text ?></p>
+					<p class="lead"><?php echo $optin_text; ?></p>
 				</div> <!-- end col -->
 
 				<div class="col-sm-4">
-					<button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal"><?php echo $optin_button_text ?></button>
+					<button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal"><?php echo $optin_button_text; ?></button>
 				</div> <!-- end col -->
 			</div> <!-- end row -->
 		</div> <!-- end container -->
@@ -101,19 +112,19 @@ get_header(); ?>
 					<img src="<?php echo $income_featured_image['url']; ?>" alt="<?php echo $income_featured_image['alt']; ?>">
 				<?php endif; ?>
 
-				<h2><?php echo $income_section_title ?></h2>
+				<h2><?php echo $income_section_title; ?></h2>
 			</div> <!-- end section-header -->
 
-			<p class="lead"><?php echo $income_section_desc ?></p>
+			<p class="lead"><?php echo $income_section_desc; ?></p>
 
 			<div class="row">
 				<div class="col-sm-6">
-					<h3><?php echo $reason_1_title ?></h3>
-					<p><?php echo $reason_1_desc ?></p>
+					<h3><?php echo $reason_1_title; ?></h3>
+					<p><?php echo $reason_1_desc; ?></p>
 				</div> <!-- end col -->
 				<div class="col-sm-6">
-					<h3><?php echo $reason_2_title ?></h3>
-					<p><?php echo $reason_1_desc ?></p>
+					<h3><?php echo $reason_2_title; ?></h3>
+					<p><?php echo $reason_1_desc; ?></p>
 				</div> <!-- end col -->
 			</div> <!-- end row -->
 		</div> <!-- end container -->
@@ -134,7 +145,7 @@ get_header(); ?>
 
 			<div class="row">
 				<div class="col-sm-8 col-sm-offset-2">
-					<?php echo $who_section_body ?>
+					<?php echo $who_section_body; ?>
 				</div> <!-- end col -->
 			</div> <!-- end row -->
 		</div> <!-- end container -->
@@ -150,10 +161,10 @@ get_header(); ?>
 					<img src="<?php echo $features_section_image['url']; ?>" alt="<?php echo $features_section_image['alt']; ?>">
 				<?php endif; ?>
 
-				<h2><?php echo $features_section_title ?></h2>
+				<h2><?php echo $features_section_title; ?></h2>
 
 				<?php if( !empty($features_section_body) ) : ?>
-					<p class="lead"><?php echo $features_section_body ?></p>
+					<p class="lead"><?php echo $features_section_body; ?></p>
 				<?php endif; ?>
 			</div> <!-- end section-header -->
 
@@ -174,8 +185,8 @@ get_header(); ?>
 	================================ -->
 	<section id="project-features">
 		<div class="container">
-			<h2><?php echo $project_feature_title ?></h2>
-			<p class="lead"><?php echo $project_feature_body ?></p>
+			<h2><?php echo $project_feature_title; ?></h2>
+			<p class="lead"><?php echo $project_feature_body; ?></p>
 
 			<div class="row">
 				<?php $loop = new WP_Query( array( 'post_type' => 'project_feature', 'orderby' => 'post_id', 'order' => 'ASC') ); ?>
@@ -216,22 +227,28 @@ get_header(); ?>
 				<div class="col-sm-8 col-md-6">
 					<div class="row">
 						<div class="col-lg-8">
-							<h2>Your Instructor <small>Clint Losee</small></h2>
+							<h2><?php echo $instructor_section_title; ?> <small><?php echo $instructor_name; ?></small></h2>
 						</div> <!-- end col -->
 						<div class="col-lg-4">
-							<a href="https://twitter.com" target="_blank" class="badge social twitter"><i class="fa fa-twitter"></i></a>
-							<a href="https://facebook.com" target="_blank" class="badge social facebook"><i class="fa fa-facebook"></i></a>
-							<a href="https://googleplus.com" target="_blank" class="badge social gplus"><i class="fa fa-google-plus"></i></a>
+
+							<?php if( !empty($twitter_username) ) : ?>
+							<a href="https://twitter.com/<?php echo $twitter_username; ?>" target="_blank" class="badge social twitter"><i class="fa fa-twitter"></i></a>
+							<?php endif; ?>
+
+							<?php if( !empty($facebook_username) ) : ?>
+							<a href="https://facebook.com<?php echo $facebook_username ?>" target="_blank" class="badge social facebook"><i class="fa fa-facebook"></i></a>
+							<?php endif; ?>
+
+							<?php if( !empty($googleplus_username) ) : ?>
+							<a href="https://google.com/<?php echo $googleplus_username; ?>" target="_blank" class="badge social gplus"><i class="fa fa-google-plus"></i></a>
+							<?php endif; ?>
+
 						</div> <!-- end col -->
 					</div> <!-- end row -->
 
-					<p class="lead">A highly skilled professional, Clint Losee is a passionate and experienced web developer, blogger and digital entrepreneur.</p>
+					<p class="lead"><?php echo $bio_excerpt; ?></p>
 
-					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+					<?php echo $full_bio; ?>
 
 					<hr>
 
@@ -241,7 +258,7 @@ get_header(); ?>
 						<div class="col-xs-4">
 							<div class="num">
 								<div class="num-content">
-									41,000+ <span>students</span>
+									<?php echo $number_circle_one ?> <span>students</span>
 								</div> <!-- end num-content -->
 							</div> <!-- end num -->
 						</div> <!-- end col -->
@@ -249,7 +266,7 @@ get_header(); ?>
 						<div class="col-xs-4">
 							<div class="num">
 								<div class="num-content">
-									560 <span>reviews</span>
+									<?php echo $number_circle_two ?> <span>reviews</span>
 								</div> <!-- end num-content -->
 							</div> <!-- end num -->
 						</div> <!-- end col -->
@@ -257,7 +274,7 @@ get_header(); ?>
 						<div class="col-xs-4">
 							<div class="num">
 								<div class="num-content">
-									4 <span>courses</span>
+									<?php echo $number_circle_three ?> <span>courses</span>
 								</div> <!-- end num-content -->
 							</div> <!-- end num -->
 						</div> <!-- end col -->
@@ -277,57 +294,28 @@ get_header(); ?>
 
 					<h2>What People Are Saying About Clint</h2>
 
-					<!-- TESTIMONIAL -->
-					<div class="row testimonial">
-						<div class="col-sm-4">
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/brennan.jpg" alt="Brennan">
-						</div> <!-- end col -->
-						<div class="col-sm-8">
-							<blockquote>
-								Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-								<cite>&mdash; Brennan, graduate of this course</cite>
-							</blockquote> <!-- end blockquote -->
-						</div> <!-- end col -->
-					</div> <!-- end row testimonial -->
+					<?php $loop = new WP_Query( array( 'post_type' => 'testimonial', 'orderby' => 'post_id', 'order' => 'ASC') ); ?>
 
-					<!-- TESTIMONIAL -->
-					<div class="row testimonial">
-						<div class="col-sm-4">
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ben.png" alt="Illustration of a man with a moustache">
-						</div> <!-- end col -->
-						<div class="col-sm-8">
-							<blockquote>
-								Banjo tattooed sriracha polaroid, Banksy Marfa Neutra iPhone cray. Pug leggings sartorial, iPhone narwhal Pinterest Godard. Cardigan aesthetic next level typewriter pork belly Williamsburg American Apparel, YOLO chia pug. Ethical occupy keytar, leggings put a bird on it church-key before they sold out letterpress Thundercats ennui heirloom trust fund Truffaut. Narwhal leggings pork belly authentic viral. Quinoa Marfa fanny pack vegan cred. Organic gluten-free photo booth, single-origin coffee seitan Thundercats farm-to-table twee Portland fingerstache XOXO beard Intelligentsia flexitarian locavore.
-								<cite>&mdash; Ben, graduate of this other course</cite>
-							</blockquote> <!-- end blockquote -->
-						</div> <!-- end col -->
-					</div> <!-- end row testimonial -->
+					<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 
-					<!-- TESTIMONIAL -->
-					<div class="row testimonial">
-						<div class="col-sm-4">
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/aj.png" alt="Illustration of a man with a beard">
-						</div> <!-- end col -->
-						<div class="col-sm-8">
-							<blockquote>
-								Food truck organic vegan aesthetic, pour-over 8-bit hashtag jean shorts McSweeney's. 90's Echo Park slow-carb polaroid, McSweeney's normcore church-key heirloom tattooed food truck chambray aesthetic single-origin coffee Etsy yr. Tousled American Apparel meditation chia Odd Future, put a bird on it banjo gentrify Portland swag. Shoreditch asymmetrical Neutra, lumbersexual gentrify scenester health goth Kickstarter swag bitters disrupt next level. Cronut selvage retro 90's. Banjo slow-carb Pitchfork, vegan mixtape ugh lumbersexual migas disrupt cred. Actually Vice authentic, ugh Neutra kitsch Etsy.
-								<cite>&mdash; AJ, graduate of this course</cite>
-							</blockquote> <!-- end blockquote -->
-						</div> <!-- end col -->
-					</div> <!-- end row testimonial -->
+						<!-- TESTIMONIAL -->
+						<div class="row testimonial">
+							<div class="col-sm-4">
+								<?php
+									if ( has_post_thumbnail() ) {
+										the_post_thumbnail(200, 200);
+									}
+								?>
+							</div> <!-- end col -->
+							<div class="col-sm-8">
+								<blockquote>
+									<?php the_content(); ?>
+									<cite>&mdash; <?php the_title(); ?></cite>
+								</blockquote> <!-- end blockquote -->
+							</div> <!-- end col -->
+						</div> <!-- end row testimonial -->
 
-					<!-- TESTIMONIAL -->
-					<div class="row testimonial">
-						<div class="col-sm-4">
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/ernest.png" alt="Illustration of a man with a beard in a suit">
-						</div> <!-- end col -->
-						<div class="col-sm-8">
-							<blockquote>
-								Taxidermy cornhole banh mi twee messenger bag forage. Chambray cliche literally ugh, seitan butcher tousled paleo photo booth American Apparel. Blog fixie stumptown, tousled Neutra gluten-free American Apparel listicle occupy irony tilde fap retro Williamsburg kale chips. High Life swag street art, flannel pug yr Wes Anderson. Odd Future wayfarers bespoke, asymmetrical Banksy selvage raw denim pug twee.
-								<cite>&mdash; Ernest, graduate of another course</cite>
-							</blockquote> <!-- end blockquote -->
-						</div> <!-- end col -->
-					</div> <!-- end row testimonial -->
+					<?php endwhile; ?>
 
 				</div> <!-- end col -->
 			</div> <!-- end row -->

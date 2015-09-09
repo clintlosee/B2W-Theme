@@ -870,6 +870,9 @@ section h3 {
 #instructor h2 {
 	margin: 0 0 20px;
 }
+#instructor a {
+	color: #fff;
+}
 #instructor .num {
 	display: table;
 	font-size: 30px;
