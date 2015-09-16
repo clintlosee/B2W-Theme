@@ -1078,6 +1078,18 @@ footer li.signup-link a:hover {
 	border-top: 1px solid #eee;
 }
 
+/* Specific WP Comment Styles */
+#comments footer {
+	background: none;
+	color: inherit;
+}
+#comments footer a {
+	color: inherit;
+}
+#comments .comment-metadata {
+	margin: 10px 0 0;
+}
+
 /* == RESOURCES ==*/
 
 .resource {
