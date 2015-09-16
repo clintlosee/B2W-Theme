@@ -9,26 +9,36 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<!-- BLOG POST CONTENT SECTION
+	================================ -->
+	<div class="container">
+		<div class="row" id="primary">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<main id="content" class="col-sm-8">
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php the_post_navigation(); ?>
+					<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+					<?php the_post_navigation(); ?>
 
-		<?php endwhile; // End of the loop. ?>
+					<?php
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+					?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<?php endwhile; // End of the loop. ?>
 
-<?php get_sidebar(); ?>
+			</main> <!-- end content -->
+
+			<!-- SIDEBAR
+			================================ -->
+			<aside class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</aside>
+		</div> <!-- end row primary -->
+	</div> <!-- end container -->
+
 <?php get_footer(); ?>
