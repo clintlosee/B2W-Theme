@@ -150,3 +150,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+/**
+ * Replaces the excerpt 'more' text by a link.
+ */
+ function new_excerpt_more($more) {
+	 global $post;
+	 return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
+ }
+ add_filter('excerpt_more', 'new_excerpt_more');
