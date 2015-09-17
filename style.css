@@ -310,6 +310,11 @@ img {
 ## Menus
 --------------------------------------------------------------*/
 
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a {
+	color: white;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
