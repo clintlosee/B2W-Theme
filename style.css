@@ -641,6 +641,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 3em;
 }
+h1 small {
+	color: white;
+	font-size: 0.7em;
+}
 h1, h2 {
 	margin: 0 0 40px;
 }
@@ -727,7 +731,9 @@ blockquote cite {
 blockquote:before {
 	display: none;
 }
-
+.taxonomy-description p {
+	padding-top: 10px;
+}
 
 /* == HERO == */
 #hero {
