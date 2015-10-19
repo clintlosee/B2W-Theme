@@ -1209,6 +1209,21 @@ button[type="submit"]:hover {
 		margin-right: 2%;
 		min-height: 750px;
 	}
+    
+    .post-comments-badge {
+        height: 40px;
+        width: 40px;
+        top: 40px;
+        right: 10px;
+    }
+
+    .post-comments-badge a {
+        font-size: 12px;
+        line-height: 6px;
+    }
+    .post-comments-badge i.fa {
+        font-size: 12px;
+    }
 }
 /* Fix top margin when logged in */
 @media screen and ( max-width: 782px ) {
